@@ -26,6 +26,9 @@ func main() {
 	e.GET("/ping", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, struct{ Status string }{Status: "OK"})
 	})
+	e.GET("/tiktok", func(c echo.Context) error {
+		return c.JSON(http.StatusOK, struct{ Status string }{Status: "tiktok OK"})
+	})
 
 	httpPort := os.Getenv("HTTP_PORT")
 	if httpPort == "" {
