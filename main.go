@@ -29,6 +29,9 @@ func main() {
 	e.GET("/tiktok", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, struct{ Status string }{Status: "tiktok OK"})
 	})
+	e.GET("/instagram", func(c echo.Context) error {
+		return c.JSON(http.StatusOK, struct{ Status string }{Status: "instagram OK"})
+	})
 
 	httpPort := os.Getenv("HTTP_PORT")
 	if httpPort == "" {
